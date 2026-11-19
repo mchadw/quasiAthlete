@@ -1,0 +1,126 @@
+{
+  "id": "squash__sprint_track",
+  "name": "Squash + Sprint Track (60m-400m)",
+  "mainSport": "squash",
+  "trackBranch": "sprint_track",
+  "gymModality": "sprint_force",
+  "summary": "Court-primary week separating high-density COD/braking squash days from track speed and heavy lower-body force lifts.",
+  "priorityRules": [
+    "Separate high-density squash court days (group/conditioning/matchplay) from track speed by 48-72 h.",
+    "Never assume matchplay is the hardest squash session — log session type and COD density.",
+    "Build deceleration and unilateral braking force via sprint_force gym without clustering before key court or speed days."
+  ],
+  "gymModule": {
+    "modality": "sprint_force",
+    "label": "Sprint Force (Heavy Low-Rep + Deceleration)",
+    "frequency": "1-2x/week",
+    "repRange": "3-5 reps, full rest (2-4 min)",
+    "focus": "Heavy squat/hinge, unilateral lunge/adductor force, low-volume power/plyo (contacts logged), and upper/trunk support for court braking."
+  },
+  "days": [
+    {
+      "day": "Mon",
+      "primary": {
+        "sport": "squash",
+        "domain": "squash",
+        "title": "Squash: Low-density solo drills / movement skills",
+        "isKey": false
+      },
+      "secondary": {
+        "sport": "other",
+        "domain": "global",
+        "title": "Mobility / light trunk",
+        "isKey": false
+      },
+      "plannedTag": "easy",
+      "focus": "Controlled lunges and T-recovery; low COD stress."
+    },
+    {
+      "day": "Tue",
+      "primary": {
+        "sport": "squash",
+        "domain": "squash",
+        "title": "Squash: Key group drills / conditioning or matchplay",
+        "isKey": true,
+        "modifiers": ["high_density_cod"]
+      },
+      "secondary": null,
+      "plannedTag": "hard",
+      "focus": "High COD/braking day — keep track off this day."
+    },
+    {
+      "day": "Wed",
+      "primary": {
+        "sport": "gym",
+        "domain": "gym_lower",
+        "title": "Gym (sprint_force #1): Heavy squat/hinge + unilateral lunge/adductor force",
+        "isKey": false,
+        "modifiers": ["heavy_lower"]
+      },
+      "secondary": null,
+      "plannedTag": "moderate",
+      "focus": "Build braking and lower-limb force; no track speed today."
+    },
+    {
+      "day": "Thu",
+      "primary": {
+        "sport": "squash",
+        "domain": "squash",
+        "title": "Squash: Technical feeding / controlled ghosting",
+        "isKey": false
+      },
+      "secondary": {
+        "sport": "other",
+        "domain": "global",
+        "title": "Optional easy non-impact aerobic flush",
+        "isKey": false
+      },
+      "plannedTag": "moderate",
+      "focus": "Track COD density rating (1-5) and calf/groin response."
+    },
+    {
+      "day": "Fri",
+      "primary": {
+        "sport": "track",
+        "domain": "track",
+        "title": "Track: Short speed / acceleration + low-vol plyos",
+        "isKey": true,
+        "modifiers": ["speed", "plyo"]
+      },
+      "secondary": null,
+      "plannedTag": "hard",
+      "focus": "Separated 48-72 h from Tuesday's hard court session."
+    },
+    {
+      "day": "Sat",
+      "primary": {
+        "sport": "squash",
+        "domain": "squash",
+        "title": "Squash: Matchplay or high-intensity ghosting",
+        "isKey": true,
+        "modifiers": ["high_density_cod"]
+      },
+      "secondary": {
+        "sport": "gym",
+        "domain": "gym_lower",
+        "title": "Gym (sprint_force #2): Low-vol power / upper / adductor",
+        "isKey": false,
+        "modifiers": ["power"]
+      },
+      "plannedTag": "hard",
+      "focus": "Court first; drop gym #2 if ankle, calf, knee, or groin is elevated."
+    },
+    {
+      "day": "Sun",
+      "primary": {
+        "sport": "other",
+        "domain": "global",
+        "title": "Mandatory rest",
+        "isKey": false
+      },
+      "secondary": null,
+      "plannedTag": "easy",
+      "focus": "Full lower-limb recovery after high COD + sprint week."
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "id": "swim__mdlong_track",
+  "name": "Swimming + Md-Long Track (800m-5km)",
+  "mainSport": "swim",
+  "trackBranch": "mdlong_track",
+  "gymModality": "distance_prehab",
+  "summary": "Pool-primary endurance week paired with polarized track aerobic/interval work and tendon-friendly prehab gym.",
+  "priorityRules": [
+    "Main-sport (Swim) key threshold/endurance sessions take precedence when paired with easy running.",
+    "Never place max-strength or novel heavy eccentrics immediately before key track intervals.",
+    "Track running impact separately from pool volume so low-impact swimming does not mask run spikes."
+  ],
+  "gymModule": {
+    "modality": "distance_prehab",
+    "label": "Distance Prehab (Tendon & Capacity)",
+    "frequency": "2x/week",
+    "repRange": "8-15 reps, low soreness",
+    "focus": "Straight/bent-knee calf & soleus, progressive eccentric hamstring (assisted Nordic/RDL), hip abductor/glute, single-leg step-downs, trunk stability, plus scapular balance."
+  },
+  "days": [
+    {
+      "day": "Mon",
+      "primary": {
+        "sport": "swim",
+        "domain": "swim",
+        "title": "Swim: Technique + easy aerobic",
+        "isKey": false
+      },
+      "secondary": {
+        "sport": "gym",
+        "domain": "gym_lower",
+        "title": "Gym (distance_prehab #1): Calf, hamstring eccentrics, scapular/trunk",
+        "isKey": false,
+        "modifiers": ["prehab", "eccentrics"]
+      },
+      "plannedTag": "easy",
+      "focus": "Low soreness; build tendon capacity and shoulder balance."
+    },
+    {
+      "day": "Tue",
+      "primary": {
+        "sport": "swim",
+        "domain": "swim",
+        "title": "Swim: Key threshold / pace intervals",
+        "isKey": true,
+        "modifiers": ["threshold"]
+      },
+      "secondary": {
+        "sport": "track",
+        "domain": "track",
+        "title": "Optional easy short track run (PM)",
+        "isKey": false
+      },
+      "plannedTag": "hard",
+      "focus": "Pool first; keep PM run strictly conversational."
+    },
+    {
+      "day": "Wed",
+      "primary": {
+        "sport": "track",
+        "domain": "track",
+        "title": "Track: Easy aerobic run",
+        "isKey": false
+      },
+      "secondary": {
+        "sport": "swim",
+        "domain": "swim",
+        "title": "Easy recovery swim",
+        "isKey": false
+      },
+      "plannedTag": "easy",
+      "focus": "Separate lower-limb impact days from hard intensity."
+    },
+    {
+      "day": "Thu",
+      "primary": {
+        "sport": "track",
+        "domain": "track",
+        "title": "Track: Intervals / tempo",
+        "isKey": true,
+        "modifiers": ["intervals", "tempo"]
+      },
+      "secondary": {
+        "sport": "swim",
+        "domain": "swim",
+        "title": "Short recovery swim",
+        "isKey": false
+      },
+      "plannedTag": "hard",
+      "focus": "No heavy gym before key track intervals."
+    },
+    {
+      "day": "Fri",
+      "primary": {
+        "sport": "swim",
+        "domain": "swim",
+        "title": "Swim: Steady aerobic (no heavy paddles)",
+        "isKey": false,
+        "modifiers": ["no_paddles"]
+      },
+      "secondary": {
+        "sport": "gym",
+        "domain": "gym_lower",
+        "title": "Gym (distance_prehab #2): SLS, hip, soleus, upper pull",
+        "isKey": false,
+        "modifiers": ["prehab"]
+      },
+      "plannedTag": "moderate",
+      "focus": "Keep eccentric dose moderate ahead of weekend sessions."
+    },
+    {
+      "day": "Sat",
+      "primary": {
+        "sport": "swim",
+        "domain": "swim",
+        "title": "Swim: Longer main endurance set",
+        "isKey": true,
+        "modifiers": ["endurance"]
+      },
+      "secondary": null,
+      "plannedTag": "hard",
+      "focus": "Primary sport endurance anchor."
+    },
+    {
+      "day": "Sun",
+      "primary": {
+        "sport": "track",
+        "domain": "track",
+        "title": "Track: Steady/long easy run (within baseline)",
+        "isKey": false,
+        "modifiers": ["long_run"]
+      },
+      "secondary": {
+        "sport": "other",
+        "domain": "global",
+        "title": "Rest",
+        "isKey": false
+      },
+      "plannedTag": "moderate",
+      "focus": "Monitor next-morning calf/Achilles and shin symptoms."
+    }
+  ]
+}
