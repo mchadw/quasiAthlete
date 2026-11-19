@@ -1,0 +1,134 @@
+{
+  "id": "erg__sprint_track",
+  "name": "Erg Rowing + Sprint Track (60m-400m)",
+  "mainSport": "erg",
+  "trackBranch": "sprint_track",
+  "gymModality": "sprint_force",
+  "summary": "Erg-only rowing week paired with short track sprint work and heavy low-rep force lifts with lumbar/rib protection.",
+  "priorityRules": [
+    "Main-sport (Erg) key intervals always come before Track speed when on the same day.",
+    "Track continuous erg bout length closely (>30 min bouts elevate lumbar load).",
+    "Separate heavy posterior-chain sprint_force lifting from both key erg and key track speed days."
+  ],
+  "gymModule": {
+    "modality": "sprint_force",
+    "label": "Sprint Force (Heavy Low-Rep)",
+    "frequency": "1-2x/week",
+    "repRange": "3-5 reps, full rest (2-4 min)",
+    "focus": "Heavy squat/trap-bar hinge, explosive/power work, upper-back pulling and trunk stiffness; avoid stacking heavy hinge immediately before long erg or track sprints."
+  },
+  "days": [
+    {
+      "day": "Mon",
+      "primary": {
+        "sport": "erg",
+        "domain": "erg",
+        "title": "Erg: Steady aerobic (split <=25 min bouts if back history)",
+        "isKey": false,
+        "modifiers": ["bout_guard"]
+      },
+      "secondary": {
+        "sport": "other",
+        "domain": "global",
+        "title": "Trunk / hip mobility",
+        "isKey": false
+      },
+      "plannedTag": "easy",
+      "focus": "Track continuous bout length (>30 min lumbar guard)."
+    },
+    {
+      "day": "Tue",
+      "primary": {
+        "sport": "erg",
+        "domain": "erg",
+        "title": "Erg: Key hard intervals",
+        "isKey": true,
+        "modifiers": ["hard_intervals"]
+      },
+      "secondary": {
+        "sport": "track",
+        "domain": "track",
+        "title": "Track: Short speed / acceleration (PM)",
+        "isKey": false,
+        "modifiers": ["speed"]
+      },
+      "plannedTag": "hard",
+      "focus": "Erg first; avoid stacking long continuous erg on the same day."
+    },
+    {
+      "day": "Wed",
+      "primary": {
+        "sport": "gym",
+        "domain": "gym_lower",
+        "title": "Gym (sprint_force #1): Heavy squat/hinge + upper-back pull",
+        "isKey": false,
+        "modifiers": ["heavy_lower", "upper_pull"]
+      },
+      "secondary": null,
+      "plannedTag": "moderate",
+      "focus": "Separate heavy posterior-chain lifting from erg/track hard days."
+    },
+    {
+      "day": "Thu",
+      "primary": {
+        "sport": "erg",
+        "domain": "erg",
+        "title": "Erg: Easy aerobic (segmented bouts <=25-30 min)",
+        "isKey": false,
+        "modifiers": ["bout_guard"]
+      },
+      "secondary": null,
+      "plannedTag": "easy",
+      "focus": "Lumbar and rib recovery check."
+    },
+    {
+      "day": "Fri",
+      "primary": {
+        "sport": "track",
+        "domain": "track",
+        "title": "Track: Max velocity / hills + low-vol plyos",
+        "isKey": true,
+        "modifiers": ["speed", "hills", "plyo"]
+      },
+      "secondary": {
+        "sport": "erg",
+        "domain": "erg",
+        "title": "Short easy erg flush (15-20 min)",
+        "isKey": false
+      },
+      "plannedTag": "hard",
+      "focus": "Fresh CNS; log plyo contacts and lumbar/rib symptoms."
+    },
+    {
+      "day": "Sat",
+      "primary": {
+        "sport": "erg",
+        "domain": "erg",
+        "title": "Erg: Race-pace / threshold intervals",
+        "isKey": true,
+        "modifiers": ["hard_intervals"]
+      },
+      "secondary": {
+        "sport": "gym",
+        "domain": "gym_upper",
+        "title": "Gym (sprint_force #2): Explosive/power + upper pull/trunk (low vol)",
+        "isKey": false,
+        "modifiers": ["power", "heavy_upper"]
+      },
+      "plannedTag": "hard",
+      "focus": "Erg first; monitor rib/chest-wall and lumbar load closely."
+    },
+    {
+      "day": "Sun",
+      "primary": {
+        "sport": "other",
+        "domain": "global",
+        "title": "Full rest",
+        "isKey": false
+      },
+      "secondary": null,
+      "plannedTag": "easy",
+      "focus": "Full axial and lower-limb impact recovery."
+    }
+  ]
+}

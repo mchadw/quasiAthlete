@@ -1,0 +1,139 @@
+{
+  "id": "erg__mdlong_track",
+  "name": "Erg Rowing + Md-Long Track (800m-5km)",
+  "mainSport": "erg",
+  "trackBranch": "mdlong_track",
+  "gymModality": "distance_prehab",
+  "summary": "Erg-only pyramidal/polarized aerobic week paired with md-long track running and lighter tendon/trunk prehab.",
+  "priorityRules": [
+    "Main-sport (Erg) key intervals take priority on paired days; keep companion runs strictly easy.",
+    "Split continuous erg sessions >30 min with brief standing breaks to limit cumulative lumbar flexion load.",
+    "Use lighter distance_prehab strength (8-15 reps) rather than max-strength days before key runs."
+  ],
+  "gymModule": {
+    "modality": "distance_prehab",
+    "label": "Distance Prehab (Tendon & Capacity)",
+    "frequency": "2x/week",
+    "repRange": "8-15 reps, low soreness",
+    "focus": "Calf/soleus, progressive eccentric hamstring, hip/glute stability, single-leg control, trunk endurance, and upper-back posture support."
+  },
+  "days": [
+    {
+      "day": "Mon",
+      "primary": {
+        "sport": "erg",
+        "domain": "erg",
+        "title": "Erg: Low-intensity aerobic base",
+        "isKey": false,
+        "modifiers": ["bout_guard"]
+      },
+      "secondary": {
+        "sport": "gym",
+        "domain": "gym_lower",
+        "title": "Gym (distance_prehab #1): Calf/soleus, hamstring eccentrics, trunk, upper-back",
+        "isKey": false,
+        "modifiers": ["prehab", "eccentrics"]
+      },
+      "plannedTag": "easy",
+      "focus": "Pyramidal/polarized base; track continuous erg bout length."
+    },
+    {
+      "day": "Tue",
+      "primary": {
+        "sport": "erg",
+        "domain": "erg",
+        "title": "Erg: Key threshold / race-pace intervals",
+        "isKey": true,
+        "modifiers": ["hard_intervals"]
+      },
+      "secondary": {
+        "sport": "track",
+        "domain": "track",
+        "title": "Optional easy short run",
+        "isKey": false
+      },
+      "plannedTag": "hard",
+      "focus": "Erg first; keep optional run strictly easy."
+    },
+    {
+      "day": "Wed",
+      "primary": {
+        "sport": "track",
+        "domain": "track",
+        "title": "Track: Easy aerobic run",
+        "isKey": false
+      },
+      "secondary": {
+        "sport": "erg",
+        "domain": "erg",
+        "title": "Easy erg (20-30 min)",
+        "isKey": false
+      },
+      "plannedTag": "easy",
+      "focus": "Low intensity across both disciplines."
+    },
+    {
+      "day": "Thu",
+      "primary": {
+        "sport": "track",
+        "domain": "track",
+        "title": "Track: Threshold / VO2 intervals",
+        "isKey": true,
+        "modifiers": ["intervals", "tempo"]
+      },
+      "secondary": null,
+      "plannedTag": "hard",
+      "focus": "No heavy lower-body gym beforehand."
+    },
+    {
+      "day": "Fri",
+      "primary": {
+        "sport": "erg",
+        "domain": "erg",
+        "title": "Erg: Easy steady state (split bouts >30 min with short breaks)",
+        "isKey": false,
+        "modifiers": ["bout_guard"]
+      },
+      "secondary": {
+        "sport": "gym",
+        "domain": "gym_lower",
+        "title": "Gym (distance_prehab #2): Hip/glute, SLS, posterior chain capacity, trunk",
+        "isKey": false,
+        "modifiers": ["prehab"]
+      },
+      "plannedTag": "moderate",
+      "focus": "Manage cumulative lumbar flexion load."
+    },
+    {
+      "day": "Sat",
+      "primary": {
+        "sport": "erg",
+        "domain": "erg",
+        "title": "Erg: Longer aerobic / tempo session",
+        "isKey": true,
+        "modifiers": ["long_bout"]
+      },
+      "secondary": null,
+      "plannedTag": "hard",
+      "focus": "Monitor lumbar and rib symptoms during, after, and next morning."
+    },
+    {
+      "day": "Sun",
+      "primary": {
+        "sport": "track",
+        "domain": "track",
+        "title": "Track: Longer easy aerobic run",
+        "isKey": false,
+        "modifiers": ["long_run"]
+      },
+      "secondary": {
+        "sport": "other",
+        "domain": "global",
+        "title": "Rest",
+        "isKey": false
+      },
+      "plannedTag": "moderate",
+      "focus": "Stay strictly easy; watch lower-limb symptom trend."
+    }
+  ]
+}

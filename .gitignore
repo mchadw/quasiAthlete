@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# Local environment & embedded PGlite storage
+.env
+.env.local
+.env.*.local
+.pglite-data/
+
+# Test & coverage output
+coverage/
+*.tsbuildinfo
+
+# OS / editor artifacts
+.DS_Store

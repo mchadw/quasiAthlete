@@ -1,0 +1,122 @@
+{
+  "id": "squash__mdlong_track",
+  "name": "Squash + Md-Long Track (800m-5km)",
+  "mainSport": "squash",
+  "trackBranch": "mdlong_track",
+  "gymModality": "distance_prehab",
+  "summary": "Court-primary aerobic/intermittent week paired with polarized track running and deceleration/tendon prehab.",
+  "priorityRules": [
+    "Protect key squash court sessions first and separate them from key track interval days.",
+    "Track ankle, calf/Achilles, knee, and groin/adductor symptoms across both court and run impact.",
+    "Include unilateral braking, adductor, calf/soleus, and eccentric hamstring capacity via distance_prehab."
+  ],
+  "gymModule": {
+    "modality": "distance_prehab",
+    "label": "Distance Prehab (Unilateral Braking & Tendon)",
+    "frequency": "2x/week",
+    "repRange": "8-15 reps, low soreness",
+    "focus": "Calf/soleus, quad/lunge deceleration control, adductor/hip strength, progressive eccentric hamstring, single-leg balance, and ankle stability."
+  },
+  "days": [
+    {
+      "day": "Mon",
+      "primary": {
+        "sport": "squash",
+        "domain": "squash",
+        "title": "Squash: Solo skills / controlled footwork",
+        "isKey": false
+      },
+      "secondary": {
+        "sport": "gym",
+        "domain": "gym_lower",
+        "title": "Gym (distance_prehab #1): Calf/soleus, lunge control, adductor, SLS",
+        "isKey": false,
+        "modifiers": ["prehab"]
+      },
+      "plannedTag": "easy",
+      "focus": "Unilateral braking and tendon capacity."
+    },
+    {
+      "day": "Tue",
+      "primary": {
+        "sport": "squash",
+        "domain": "squash",
+        "title": "Squash: Key group / conditioning / matchplay",
+        "isKey": true,
+        "modifiers": ["high_density_cod"]
+      },
+      "secondary": null,
+      "plannedTag": "hard",
+      "focus": "High COD density; plan hydration for indoor heat."
+    },
+    {
+      "day": "Wed",
+      "primary": {
+        "sport": "track",
+        "domain": "track",
+        "title": "Track: Easy aerobic run",
+        "isKey": false
+      },
+      "secondary": null,
+      "plannedTag": "easy",
+      "focus": "Pure low-intensity aerobic base."
+    },
+    {
+      "day": "Thu",
+      "primary": {
+        "sport": "track",
+        "domain": "track",
+        "title": "Track: Intervals / tempo",
+        "isKey": true,
+        "modifiers": ["intervals", "tempo"]
+      },
+      "secondary": null,
+      "plannedTag": "hard",
+      "focus": "Separated 48 h from Tuesday's hard court session."
+    },
+    {
+      "day": "Fri",
+      "primary": {
+        "sport": "squash",
+        "domain": "squash",
+        "title": "Squash: Controlled feeding / technical play",
+        "isKey": false
+      },
+      "secondary": {
+        "sport": "gym",
+        "domain": "gym_lower",
+        "title": "Gym (distance_prehab #2): Hamstring eccentrics, glute/hip, ankle balance",
+        "isKey": false,
+        "modifiers": ["prehab", "eccentrics"]
+      },
+      "plannedTag": "moderate",
+      "focus": "Keep court density moderate ahead of Saturday."
+    },
+    {
+      "day": "Sat",
+      "primary": {
+        "sport": "squash",
+        "domain": "squash",
+        "title": "Squash: Matchplay or ghosting intervals",
+        "isKey": true,
+        "modifiers": ["high_density_cod"]
+      },
+      "secondary": null,
+      "plannedTag": "hard",
+      "focus": "Monitor ankle, calf, knee, and groin/adductor symptoms."
+    },
+    {
+      "day": "Sun",
+      "primary": {
+        "sport": "track",
+        "domain": "track",
+        "title": "Track: Steady easy aerobic run (or rest if LE pain >= 3)",
+        "isKey": false,
+        "modifiers": ["long_run"]
+      },
+      "secondary": null,
+      "plannedTag": "easy",
+      "focus": "Adjust down first if weekly court load was high."
+    }
+  ]
+}

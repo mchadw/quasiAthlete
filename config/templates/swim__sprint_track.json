@@ -1,0 +1,138 @@
+{
+  "id": "swim__sprint_track",
+  "name": "Swimming + Sprint Track (60m-400m)",
+  "mainSport": "swim",
+  "trackBranch": "sprint_track",
+  "gymModality": "sprint_force",
+  "summary": "Pool-primary sprint/race-pace week paired with short track speed work and heavy low-rep force strength.",
+  "priorityRules": [
+    "Main-sport (Swim) key work always comes before secondary Track speed when on the same day (separate by 4-6 h).",
+    "Never place heavy lower-body gym immediately before key Track speed or key Swim race-pace sessions.",
+    "Track shoulder load across both pool volume/paddles and dry-land upper-body sets."
+  ],
+  "gymModule": {
+    "modality": "sprint_force",
+    "label": "Sprint Force (Heavy Low-Rep)",
+    "frequency": "1-2x/week",
+    "repRange": "3-5 reps, full rest (2-4 min)",
+    "focus": "Heavy squat or trap-bar deadlift, hip hinge, explosive/power lift or low-volume plyo (contacts logged), plus swim-supportive upper pull/scapular & trunk work."
+  },
+  "days": [
+    {
+      "day": "Mon",
+      "primary": {
+        "sport": "swim",
+        "domain": "swim",
+        "title": "Swim: Technique + aerobic base",
+        "isKey": false,
+        "modifiers": ["no_paddles"]
+      },
+      "secondary": {
+        "sport": "other",
+        "domain": "global",
+        "title": "Rest / shoulder mobility",
+        "isKey": false
+      },
+      "plannedTag": "easy",
+      "focus": "Shoulder-friendly stroke mechanics; no paddles."
+    },
+    {
+      "day": "Tue",
+      "primary": {
+        "sport": "swim",
+        "domain": "swim",
+        "title": "Swim: Key speed / race-pace sets",
+        "isKey": true,
+        "modifiers": ["sprint_sets"]
+      },
+      "secondary": {
+        "sport": "track",
+        "domain": "track",
+        "title": "Track: Short speed / acceleration (4-6 h later)",
+        "isKey": false,
+        "modifiers": ["speed"]
+      },
+      "plannedTag": "hard",
+      "focus": "Pool first; cap track sprint volume and separate by 4-6 h."
+    },
+    {
+      "day": "Wed",
+      "primary": {
+        "sport": "gym",
+        "domain": "gym_lower",
+        "title": "Gym (sprint_force #1): Heavy lower + upper pull/scapular",
+        "isKey": false,
+        "modifiers": ["heavy_lower", "upper_pull"]
+      },
+      "secondary": {
+        "sport": "swim",
+        "domain": "swim",
+        "title": "Optional easy swim flush",
+        "isKey": false
+      },
+      "plannedTag": "moderate",
+      "focus": "Heavy low-rep squat/hinge (3-5 reps) + dry-land pull/core."
+    },
+    {
+      "day": "Thu",
+      "primary": {
+        "sport": "swim",
+        "domain": "swim",
+        "title": "Swim: Aerobic + pull/technique",
+        "isKey": false
+      },
+      "secondary": null,
+      "plannedTag": "easy",
+      "focus": "Keep upper-body shoulder load controlled."
+    },
+    {
+      "day": "Fri",
+      "primary": {
+        "sport": "track",
+        "domain": "track",
+        "title": "Track: Speed / hills + low-volume plyos",
+        "isKey": true,
+        "modifiers": ["speed", "hills", "plyo"]
+      },
+      "secondary": {
+        "sport": "swim",
+        "domain": "swim",
+        "title": "Short easy swim flush",
+        "isKey": false
+      },
+      "plannedTag": "hard",
+      "focus": "Log plyo contacts and surface; fresh legs post-Thu."
+    },
+    {
+      "day": "Sat",
+      "primary": {
+        "sport": "swim",
+        "domain": "swim",
+        "title": "Swim: Threshold / main aerobic set",
+        "isKey": true,
+        "modifiers": ["threshold"]
+      },
+      "secondary": {
+        "sport": "gym",
+        "domain": "gym_upper",
+        "title": "Gym (sprint_force #2): Power + upper/core (lower vol)",
+        "isKey": false,
+        "modifiers": ["power", "heavy_upper"]
+      },
+      "plannedTag": "hard",
+      "focus": "Pool first; skip gym #2 if shoulder or CNS feels fatigued."
+    },
+    {
+      "day": "Sun",
+      "primary": {
+        "sport": "other",
+        "domain": "global",
+        "title": "Rest or light recovery swim",
+        "isKey": false
+      },
+      "secondary": null,
+      "plannedTag": "easy",
+      "focus": "Full lower-limb impact break."
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "version": "1.0.0",
+  "description": "quasiAthlete v1 F1 Load Ledger & Traffic-Light Rules. Edit any threshold below and refresh the app to test immediately.",
+  "baseline": {
+    "minWeeks": 2,
+    "targetWeeks": 4,
+    "rollingWindowWeeks": 4,
+    "minSessionsInWindow": 6
+  },
+  "hardBudget": {
+    "amberDeltaOverBaseline": 1,
+    "maxConsecutiveHardDays": 2,
+    "fallbackWeeklyCap": 3
+  },
+  "domainSpikes": {
+    "globalSessionLoad": {
+      "ratioAmber": 1.3,
+      "advisoryOnly": true
+    },
+    "swim": {
+      "distanceRatioAmber": 1.25,
+      "minDeltaM": 1000,
+      "paddleSessionsJump": 2
+    },
+    "erg": {
+      "minutesRatioAmber": 1.25,
+      "minDeltaMin": 30,
+      "longBoutThresholdMin": 30,
+      "longBoutCountJump": 1
+    },
+    "squash": {
+      "minutesRatioAmber": 1.25,
+      "minDeltaMin": 30,
+      "highDensityJump": 2
+    },
+    "track": {
+      "minutesRatioAmber": 1.2,
+      "minDeltaMin": 20,
+      "speedSessionsJump": 1,
+      "plyoContactsRatioAmber": 1.25,
+      "minDeltaContacts": 30
+    },
+    "gym": {
+      "lowerHardSetsRatioAmber": 1.3,
+      "minDeltaLowerSets": 4,
+      "upperHardSetsRatioAmber": 1.3,
+      "minDeltaUpperSets": 4
+    }
+  },
+  "stacking": {
+    "amberOnSimultaneousDomainSpikes": 2,
+    "highRiskCombos": [
+      {
+        "id": "swim_shoulder_stack",
+        "label": "Swimming + Upper-Body / Paddle Shoulder Stack",
+        "provokers": ["swim", "gym_upper"],
+        "message": "Simultaneous jump in swim volume and upper-body/paddle loading increases repetitive shoulder stress."
+      },
+      {
+        "id": "erg_lumbar_stack",
+        "label": "Erg Rowing + Track / Heavy Lower Lumbar Stack",
+        "provokers": ["erg", "gym_lower", "track"],
+        "message": "Long/high erg volume stacked with track or heavy lower-body gym compounds lumbar and posterior-chain load."
+      },
+      {
+        "id": "squash_lower_limb_stack",
+        "label": "Squash Court Density + Track / Lower Gym Stack",
+        "provokers": ["squash", "track", "gym_lower"],
+        "message": "High-density squash change-of-direction work stacked with track impact or lower-body gym overloads lower-limb tissues."
+      }
+    ]
+  },
+  "symptomsAndRecovery": {
+    "amberPainThreshold": 3,
+    "amberSymptomaticSessions": 2,
+    "amberNextMorningPain": 3,
+    "amberUnusualRpeSessions": 2,
+    "amberSleepHoursFloor": 6.0,
+    "amberSleepDropVsBaselineH": 1.0,
+    "amberFatigueMeanMin": 7.0,
+    "regionToProvokerMap": {
+      "shoulder_left": ["swim", "gym_upper"],
+      "shoulder_right": ["swim", "gym_upper"],
+      "lumbar": ["erg", "gym_lower", "track"],
+      "rib_chest_wall": ["erg", "gym_upper"],
+      "ankle": ["squash", "track", "gym_lower"],
+      "calf_achilles": ["track", "squash", "gym_lower"],
+      "knee": ["squash", "track", "gym_lower"],
+      "groin_adductor": ["squash", "track", "gym_lower"],
+      "hamstring": ["track", "gym_lower", "squash"],
+      "shin_foot_bone": ["track", "squash"]
+    }
+  },
+  "redLines": {
+    "ribChestWallPainMin": 2,
+    "severePainMin": 7,
+    "worseningShoulderOrBack": {
+      "minPain": 4,
+      "consecutiveWeeks": 2,
+      "regions": ["shoulder_left", "shoulder_right", "lumbar"]
+    },
+    "clinicalFlags": [
+      "focal_bone_pain",
+      "pain_on_weight_bearing",
+      "swelling",
+      "altered_gait_or_technique",
+      "rib_pain_breathing_or_coughing",
+      "chest_pain",
+      "fainting_dizziness",
+      "heat_illness_symptoms"
+    ]
+  },
+  "amberDomainTrims": {
+    "swim": {
+      "volumeReductionPct": "20-30%",
+      "action": "Trim swim volume by 20-30%, remove paddles and sprint sets, and keep pool sessions to easy technique."
+    },
+    "erg": {
+      "volumeReductionPct": "20-30%",
+      "action": "Trim erg minutes by 20-30%, cap continuous bouts at <=25 min with 2-3 min standing breaks, and cut hard intervals."
+    },
+    "squash": {
+      "volumeReductionPct": "20-30%",
+      "action": "Trim court minutes by 20-30% and replace group/conditioning sessions with low-density solo drills or rest."
+    },
+    "track": {
+      "volumeReductionPct": "20-30%",
+      "action": "Drop hills, plyometrics, and speed/interval sessions; convert track days to short easy runs or full rest."
+    },
+    "gym_lower": {
+      "volumeReductionPct": "25-30%",
+      "action": "Drop heavy lower-body sets (sprint_force: mobility or upper-only; distance_prehab: hold volume, zero novel eccentrics)."
+    },
+    "gym_upper": {
+      "volumeReductionPct": "25-30%",
+      "action": "Drop heavy upper-body push/pull sets and paddle resistance; focus on pain-free scapular control or rest."
+    }
+  }
+}
